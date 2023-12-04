@@ -1,14 +1,8 @@
 ---
-- name: Ejecutar Comando Remoto
-  hosts: nombre-del-grupo-en-el-inventario
-  gather_facts: false
-  become: true
+- name: Ejemplo de Playbook con comando pwd
+  hosts: tu_grupo_de_inventario
+  become: false  # No es necesario ejecutar comandos con privilegios de root
 
   tasks:
-    - name: Imprimir Directorio Actual
+    - name: Ejecutar el comando pwd
       command: pwd
-      register: resultado_pwd
-
-    - name: Mostrar Resultado
-      debug:
-        var: resultado_pwd.stdout
