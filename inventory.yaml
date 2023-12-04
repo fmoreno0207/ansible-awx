@@ -1,0 +1,5 @@
+---
+all:
+  hosts:
+    wospanp2bpgdbm01:
+      ansible_host: 10.101.2.150
